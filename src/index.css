@@ -1,0 +1,142 @@
+:root {
+  --orange: #E3530F;
+  --blue: #053C6D;
+  --semiorange: #FDF1EC;
+  --white: #ffffff;
+  --textPrimary: #ffffff;
+  --textPrimary-black: #353535;
+  --grey: #DCDCDC;
+  --black: #353535;
+  --lightblack: #666666;
+  --body-bg: #f5f5f5;
+  --darkorange: #703D10;
+  --darkgreen: #185827;
+  --darkred: #912921;
+  --lightred: #FFE0DE;
+  --disabled-text: #C0C0C0;
+  --thead-bg: #f5f5f5;
+  --white-level-1: #ffffff;
+  --white-level-2: #ffffff;
+  --disabled-bg: #f5f5f5;
+  --highlight-grey: #f5f5f5;
+  --text2: #666666;
+  --txtgold: #DE9B00;
+  --txt-bronze: #ad5600;
+  --highlight-light-orange: #FCEBE3;
+  --highlight-orange: #F5C1A9;
+  
+  /* Secondary */
+  --yellow: #FFAC33;
+  --lightmagenta: #f3e0ec;
+  --magenta: #bf5698;
+  --lightpurple: #ecebf7;
+  --purple: #7b73bf;  
+  --lightblue: #eff6ff;
+  --lightgreen: #dcefde;
+  --lightyellow: #FFF2DE;
+  --darkgrey: #9b9b9b;
+  --gold: #905E28;
+  --lightred-2: rgba(254, 60, 48, 0.2);
+  --border: #dcdcdc;
+  --divider: #ebebeb;
+  --bs-border-color: #DCDCDC;
+  
+  --navpills-border: #1E2230;
+  --navpills-bggrey: #f5f6f7;
+  --navpills-txtgrey: #1E2230;
+  
+  --lightbgyellow: #F7F2E9;
+  --lightyellow-border: #EB9923;
+  --lighttxtyellow: #EB9923;
+  --badgelightgreen: rgba(71, 178, 98, 0.1);
+  --badgelightblue: rgba(101, 237, 255, 0.1);  
+  --green-400: #F9F9F5;
+  
+  /* Stocks */
+  --red: #fe3c30;
+  --red-rgb: 254, 60, 48;
+  --green: #269C32;
+  --green-rgb: 52, 199, 88;
+  --freshgreen: #26bf26;  
+ 
+  /* Chart */
+  --chart-green: #44C795;
+  --chart-lightgreen: #A1E3CA;
+  --chart-red: #FE6359;
+  --chart-lightred: #FE928B;
+  --chart-yellow: #FFCC4D;
+  --chart-lightyellow: #FFE5A6;
+  --chart-blue: #18A0FB;
+  --chart-lightblue: #A3D9FD;
+  --chart-darkblue: #053C6D;
+  --chart-light-darkblue: #3B668D;
+  --chart-brown: #F0AE74;
+  --chart-lightbrown: #F7D7B9;
+
+  /* Aliases for backwards compatibility */
+  --primary-orange: var(--orange);
+  --primary-orange-hover: #d04e06;
+  --primary-orange-light: var(--semiorange);
+  --primary-orange-border: #ffd7c2;
+  --text-dark: var(--black);
+  --text-muted: var(--lightblack);
+  --text-light-gray: var(--darkgrey);
+  --bg-light: var(--body-bg);
+  --bg-card: var(--white);
+  --border-card: var(--grey);
+  --border-card-hover: #cbd5e1;
+  --radius-card: 8px;
+  --radius-tag: 3px;
+  --radius-button: 6px;
+  --font-family: 'Mulish', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ========================================================
+   DARK THEME (#1E2230) - Full Application Coverage
+   ======================================================== */
+:root[data-theme='dark'],
+.dark-theme {
+  --body-bg: #151824;
+  --bg-card: #1E2230;
+  --white: #1E2230;
+  --white-level-1: #252A3B;
+  --white-level-2: #2B3042;
+  --black: #F1F5F9;
+  --textPrimary-black: #F1F5F9;
+  --text-dark: #FFFFFF;
+  --text-muted: #94A3B8;
+  --lightblack: #94A3B8;
+  --grey: #2B3145;
+  --border: #2B3145;
+  --border-card: #2B3145;
+  --border-card-hover: #3D4560;
+  --divider: #2B3145;
+  --bs-border-color: #2B3145;
+  --thead-bg: #1A1E2B;
+  --disabled-bg: #252A3B;
+  --highlight-grey: #252A3B;
+  --semiorange: rgba(227, 83, 15, 0.15);
+  --primary-orange-border: rgba(227, 83, 15, 0.35);
+  --navpills-border: #3D4560;
+  --navpills-bggrey: #252A3B;
+  --navpills-txtgrey: #F1F5F9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--body-bg);
+  color: var(--textPrimary-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}

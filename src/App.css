@@ -1,0 +1,934 @@
+/* Global Theme Variables and Overrides for Dark Mode (#1E2230) */
+
+.app-container {
+  min-height: 100vh;
+  background-color: var(--body-bg, #f5f5f5);
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+  width: 100%;
+  transition: background-color 0.25s ease;
+}
+
+.app-content {
+  width: 100%;
+  max-width: 1382px;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 8px 0;
+  }
+}
+
+/* ========================================================
+   THEME TOGGLE BUTTON (Left-Aligned Floating/Bar Control)
+   ======================================================== */
+.theme-toggle-floating-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1E2230;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.theme-toggle-floating-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border-color: #E3530F;
+}
+
+.theme-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+:root:not(.dark-theme) .theme-toggle-floating-btn {
+  background-color: #1E2230;
+  color: #FFFFFF;
+  border-color: #3D4560;
+}
+
+.dark-theme .theme-toggle-floating-btn {
+  background-color: #252A3B;
+  color: #FFFFFF;
+  border-color: rgba(227, 83, 15, 0.5);
+}
+
+/* ========================================================
+   DARK THEME COMPONENT STYLING (#1E2230)
+   ALL TEXTS SET TO BRIGHT WHITE (#FFFFFF) / HIGH CONTRAST
+   ======================================================== */
+
+.dark-theme .strategies-page,
+.dark-theme .smart-trading-page {
+  background-color: #151824 !important;
+  color: #FFFFFF !important;
+}
+
+/* Main Container Card in Dark Theme */
+.dark-theme .strategies-main-card {
+  background: #1E2230 !important;
+  border-color: #2B3145 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Top Announcement Bar */
+.dark-theme .top-announcement-bar {
+  border-bottom-color: #2B3145 !important;
+}
+
+.dark-theme .announcement-text {
+  color: #FFFFFF !important;
+}
+
+/* Top Banner Cards */
+.dark-theme .banner-card,
+.dark-theme .spring-algo-card,
+.dark-theme .webinar-card {
+  background: #1E2230 !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .banner-card:hover,
+.dark-theme .spring-algo-card:hover,
+.dark-theme .webinar-card:hover {
+  border-color: #3D4560 !important;
+}
+
+.dark-theme .banner-card-title,
+.dark-theme .webinar-title {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .banner-card-desc,
+.dark-theme .webinar-desc {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .banner-card-desc strong {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .webinar-footer {
+  color: #FFFFFF !important;
+}
+
+/* Tabs */
+.dark-theme .tab-btn {
+  background: #252A3B !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .tab-btn:hover {
+  border-color: #475569 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .tab-btn--active {
+  background-color: #E3530F !important;
+  border-color: #E3530F !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .tab-badge {
+  background: #1E2230 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .tab-btn--active .tab-badge {
+  background: #FFFFFF !important;
+  color: #E3530F !important;
+}
+
+/* Search input & Controls */
+.dark-theme .search-input {
+  background: #252A3B !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .search-input::placeholder {
+  color: #94A3B8 !important;
+}
+
+.dark-theme .view-toggle {
+  background: #252A3B !important;
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .toggle-btn {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .toggle-btn:hover:not(.active) {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .toggle-btn.active {
+  background-color: #E3530F !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .control-dropdown-btn,
+.dark-theme .sort-dropdown-btn {
+  background: #252A3B !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .dropdown-menu {
+  background: #1E2230 !important;
+  border-color: #2B3145 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-theme .radio-option {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .radio-option:hover {
+  background-color: #252A3B !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .filter-title {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .clear-all-btn {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .filter-section-title {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .checkbox-option {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .checkbox-option:hover {
+  color: #FFFFFF !important;
+}
+
+/* ========================================================
+   Strategy Cards in Dark Theme (#1E2230)
+   (Specifically description, min amount, title, tags)
+   ======================================================== */
+.dark-theme .strategy-card {
+  background-color: #1E2230 !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .strategy-card:hover {
+  border-color: #3D4560 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark-theme .strategy-card__title {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .strategy-card__description,
+.dark-theme .strategy-card__description--list,
+.dark-theme .strategy-card__desc {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .strategy-card__know-more {
+  color: #FF7A38 !important;
+}
+
+.dark-theme .strategy-card__amount-label,
+.dark-theme .strategy-card__min-label {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .strategy-card__amount-value,
+.dark-theme .strategy-card__min-amount {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .strategy-card__tag--default {
+  background-color: #252A3B !important;
+  color: #FFFFFF !important;
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .strategy-card__tag--orange {
+  background-color: rgba(227, 83, 15, 0.25) !important;
+  color: #FF8547 !important;
+  border-color: rgba(227, 83, 15, 0.4) !important;
+}
+
+.dark-theme .strategy-card__avatar {
+  background-color: rgba(227, 83, 15, 0.25) !important;
+  border-color: rgba(227, 83, 15, 0.5) !important;
+  color: #FFFFFF !important;
+}
+
+/* ========================================================
+   RUNNING & COMPLETED STRATEGIES CARDS / LIST
+   (All labels, values, titles set to WHITE #FFFFFF)
+   ======================================================== */
+.dark-theme .running-strategy-card,
+.dark-theme .completed-strategy-card,
+.dark-theme .running-card,
+.dark-theme .completed-card,
+.dark-theme .running-list-row,
+.dark-theme .completed-list-row {
+  background-color: #1E2230 !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .running-card-title,
+.dark-theme .completed-card-title,
+.dark-theme .running-strategy-title,
+.dark-theme .completed-strategy-title {
+  color: #FFFFFF !important;
+}
+
+/* Day's P&L Card in Dark Theme */
+.dark-theme .days-pnl-card {
+  background-color: #1E2230 !important;
+  border: 1px solid #2B3145 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+.dark-theme .days-pnl-label {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .days-pnl-val {
+  color: #34D399 !important; /* High contrast vibrant green */
+}
+
+/* P&L Labels & Values */
+.dark-theme .pnl-label,
+.dark-theme .days-pnl-label,
+.dark-theme .running-info-label,
+.dark-theme .completed-info-label {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .pnl-val {
+  color: #34D399 !important; /* Crisp Green for P&L profit */
+}
+
+.dark-theme .pnl-val.negative {
+  color: #F87171 !important; /* Crisp Red for P&L loss */
+}
+
+.dark-theme .days-pnl-val {
+  color: #34D399 !important;
+}
+
+/* Timings */
+.dark-theme .completed-timing-label,
+.dark-theme .timing-label {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .completed-timing-val,
+.dark-theme .timing-val,
+.dark-theme .running-info-val,
+.dark-theme .completed-info-val {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .running-tag,
+.dark-theme .completed-tag,
+.dark-theme .completed-tag--gray {
+  background-color: #252A3B !important;
+  color: #FFFFFF !important;
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .running-tag--orange,
+.dark-theme .completed-tag--orange {
+  background-color: rgba(227, 83, 15, 0.25) !important;
+  color: #FF8547 !important;
+  border-color: rgba(227, 83, 15, 0.4) !important;
+}
+
+.dark-theme .btn-completed-action,
+.dark-theme .btn-running-action {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .btn-completed-action:hover,
+.dark-theme .btn-running-action:hover {
+  color: #FF8547 !important;
+}
+
+.dark-theme .btn-completed-action.btn-trades,
+.dark-theme .btn-running-action.btn-trades {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .btn-completed-action.btn-trades:hover,
+.dark-theme .btn-running-action.btn-trades:hover {
+  color: #FF8547 !important;
+}
+
+.dark-theme .completed-more-btn,
+.dark-theme .btn-running-more {
+  background: #252A3B !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .completed-more-btn:hover,
+.dark-theme .completed-more-btn.active,
+.dark-theme .btn-running-more:hover,
+.dark-theme .btn-running-more.active {
+  border-color: #E3530F !important;
+  color: #FFFFFF !important;
+}
+
+/* 3-Dots Action Dropdown Menu in Dark Theme */
+.dark-theme .running-more-menu,
+.dark-theme .running-menu-dropdown {
+  background-color: #1E2230 !important;
+  border: 1px solid #2B3145 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark-theme .running-menu-item {
+  color: #FFFFFF !important;
+  background-color: transparent !important;
+}
+
+.dark-theme .running-menu-item:hover {
+  background-color: #252A3B !important;
+  color: #E3530F !important;
+}
+
+.dark-theme .running-menu-divider {
+  background-color: #2B3145 !important;
+}
+
+/* ========================================================
+   MODALS & POPUPS IN DARK THEME
+   ======================================================== */
+.dark-theme .modal-container,
+.dark-theme .symbol-modal-container,
+.dark-theme .confirm-modal-container,
+.dark-theme .theta-confirm-modal-container,
+.dark-theme .trades-modal-container,
+.dark-theme .stop-modal-container,
+.dark-theme .delete-confirm-modal-container,
+.dark-theme .position-modal-container,
+.dark-theme .view-report-modal {
+  background: #1E2230 !important;
+  border: 1px solid #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .modal-header,
+.dark-theme .symbol-modal-header,
+.dark-theme .confirm-modal-header,
+.dark-theme .theta-confirm-modal-header,
+.dark-theme .trades-modal-header,
+.dark-theme .view-report-header {
+  border-bottom-color: #2B3145 !important;
+}
+
+.dark-theme .modal-title,
+.dark-theme .symbol-modal-title,
+.dark-theme .confirm-modal-title,
+.dark-theme .theta-confirm-modal-title,
+.dark-theme .trades-modal-title,
+.dark-theme .view-report-title,
+.dark-theme .confirm-section-title {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .modal-body,
+.dark-theme .modal-text,
+.dark-theme .modal-detail-label,
+.dark-theme .param-desc,
+.dark-theme .view-report-desc,
+.dark-theme .modal-note-text,
+.dark-theme .modal-meta-item,
+.dark-theme .modal-meta-item strong,
+.dark-theme .modal-meta-item span,
+.dark-theme .modal-work-section,
+.dark-theme .modal-work-section p,
+.dark-theme .modal-work-section ul,
+.dark-theme .modal-work-section ul li,
+.dark-theme .modal-bullet-list,
+.dark-theme .modal-bullet-list li,
+.dark-theme .modal-work-subtitle,
+.dark-theme .modal-example-container,
+.dark-theme .modal-example-left,
+.dark-theme .modal-example-left p,
+.dark-theme .modal-example-left ul,
+.dark-theme .modal-example-left ul li,
+.dark-theme .modal-example-text,
+.dark-theme .modal-parameters-list,
+.dark-theme .modal-parameter-item {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .modal-footer,
+.dark-theme .symbol-modal-footer,
+.dark-theme .confirm-modal-footer,
+.dark-theme .theta-confirm-modal-footer {
+  background-color: #1E2230 !important;
+  border-top-color: #2B3145 !important;
+}
+
+/* Know More Modal Specific Dark Theme styling */
+.dark-theme .play-video-btn,
+.dark-theme .modal-header .play-video-btn {
+  background-color: #252A3B !important;
+  border-color: #E3530F !important;
+  color: #E3530F !important;
+}
+
+.dark-theme .play-video-btn:hover,
+.dark-theme .modal-header .play-video-btn:hover {
+  background-color: #2E354B !important;
+  border-color: #FF7A38 !important;
+  color: #FF7A38 !important;
+}
+
+.dark-theme .play-video-btn svg path,
+.dark-theme .modal-header .play-video-btn svg path {
+  stroke: #E3530F !important;
+}
+
+.dark-theme .play-video-btn:hover svg path,
+.dark-theme .modal-header .play-video-btn:hover svg path {
+  stroke: #FF7A38 !important;
+}
+
+.dark-theme .modal-parameters-section {
+  background-color: transparent !important;
+}
+
+.dark-theme .modal-parameters-list {
+  background-color: transparent !important;
+}
+
+.dark-theme .modal-parameter-item {
+  background-color: transparent !important;
+}
+
+.dark-theme .param-badge {
+  background-color: #252A3B !important;
+  border: 1px solid #3D4560 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .param-label {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .param-desc {
+  color: #CBD5E1 !important;
+}
+
+.dark-theme .modal-section-title,
+.dark-theme .modal-example-title,
+.dark-theme .modal-note-title,
+.dark-theme .modal-param-title,
+.dark-theme .modal-work-subtitle,
+.dark-theme .view-report-target {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .modal-example-right {
+  background-color: #252A3B !important;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.dark-theme .modal-btn-cancel {
+  background-color: #252A3B !important;
+  border-color: #E3530F !important;
+  color: #E3530F !important;
+}
+
+.dark-theme .modal-btn-cancel:hover {
+  background-color: #2E354B !important;
+  border-color: #FF7A38 !important;
+  color: #FF7A38 !important;
+}
+
+.dark-theme .modal-btn-test,
+.dark-theme .modal-btn-trade {
+  background-color: #E3530F !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .modal-btn-test:hover,
+.dark-theme .modal-btn-trade:hover {
+  background-color: #d04e06 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .period-pill-btn {
+  background: #252A3B !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .period-pill-btn:hover {
+  border-color: #E3530F !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .period-pill-btn.active {
+  background: #E3530F !important;
+  border-color: #E3530F !important;
+  color: #FFFFFF !important;
+}
+
+/* Symbol Selection Modal in Smart Trading */
+.dark-theme .symbol-search-box {
+  background: #252A3B !important;
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .symbol-search-box input {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .symbol-search-box input::placeholder {
+  color: #94A3B8 !important;
+}
+
+.dark-theme .symbol-list-container {
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .symbol-list-item {
+  border-bottom-color: #2B3145 !important;
+}
+
+.dark-theme .symbol-list-item:hover {
+  background-color: #252A3B !important;
+}
+
+.dark-theme .symbol-list-item.is-selected {
+  background-color: rgba(227, 83, 15, 0.25) !important;
+}
+
+.dark-theme .symbol-name {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .symbol-subtype-tag {
+  color: #94A3B8 !important;
+}
+
+.dark-theme .symbol-type-badge {
+  background-color: #252A3B !important;
+  border-color: #3D4560 !important;
+  color: #FFFFFF !important;
+}
+
+/* Smart Trading Main Page & Containers */
+.dark-theme .smart-trading-container,
+.dark-theme .smart-trading-container.is-theta,
+.dark-theme .smart-trading-container.has-items,
+.dark-theme .smart-trading-header-bar,
+.dark-theme .smart-trading-basket-card,
+.dark-theme .theta-config-card,
+.dark-theme .smart-trading-footer-bar,
+.dark-theme .smart-trading-footer-bar.theta-footer-bar {
+  background-color: #1E2230 !important;
+  border-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .header-title,
+.dark-theme .theta-title {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .run-name-display,
+.dark-theme .theta-run-name,
+.dark-theme .add-run-name-btn,
+.dark-theme .theta-add-run-name {
+  color: #FF7A38 !important;
+}
+
+.dark-theme .run-name-input,
+.dark-theme .theta-run-input {
+  background: #252A3B !important;
+  border-color: #3D4560 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .smart-trading-tags .strategy-tag--default,
+.dark-theme .theta-tags .theta-tag-default {
+  background-color: #252A3B !important;
+  color: #FFFFFF !important;
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .smart-trading-tags .strategy-tag--orange,
+.dark-theme .theta-tags .theta-tag-orange {
+  background-color: rgba(227, 83, 15, 0.25) !important;
+  color: #FF8547 !important;
+  border-color: rgba(227, 83, 15, 0.4) !important;
+}
+
+.dark-theme .smart-trading-description,
+.dark-theme .theta-description {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .read-more-link,
+.dark-theme .theta-read-more {
+  color: #FF7A38 !important;
+}
+
+.dark-theme .basket-search-wrapper {
+  background: #252A3B !important;
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .basket-search-input {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .basket-search-input::placeholder {
+  color: #94A3B8 !important;
+}
+
+.dark-theme .basket-table-container,
+.dark-theme .confirm-table-container,
+.dark-theme .trades-table-container {
+  border-color: #2B3145 !important;
+  background-color: #1E2230 !important;
+}
+
+.dark-theme .basket-table-header,
+.dark-theme .confirm-table-header,
+.dark-theme .trades-table-header {
+  background-color: #151824 !important;
+  border-bottom-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .basket-table-row,
+.dark-theme .confirm-table-row,
+.dark-theme .trades-table-row {
+  background-color: #1E2230 !important;
+  border-bottom-color: #2B3145 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .col-contract,
+.dark-theme .col-text-center,
+.dark-theme .confirm-item-name,
+.dark-theme .trades-contract-name {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .col-ltp {
+  color: #34D399 !important; /* crisp vibrant green */
+}
+
+/* Stepper Boxes in Dark Mode */
+.dark-theme .basket-stepper-box,
+.dark-theme .basket-stepper-box.price-stepper,
+.dark-theme .basket-stepper-box.lot-stepper,
+.dark-theme .basket-stepper-box.disabled,
+.dark-theme .confirm-stepper,
+.dark-theme .theta-stepper {
+  background-color: #252A3B !important;
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .stepper-btn {
+  background: transparent !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .stepper-btn:hover:not(:disabled) {
+  background-color: #2E354B !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .stepper-btn:disabled {
+  color: #64748B !important;
+}
+
+.dark-theme .stepper-input,
+.dark-theme .confirm-lot-val {
+  background: transparent !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .basket-stepper-box.price-stepper .stepper-input,
+.dark-theme .basket-stepper-box.disabled .stepper-input {
+  color: #CBD5E1 !important;
+}
+
+/* Action Toggle Pill (Buy / Sell) */
+.dark-theme .action-toggle-pill {
+  background-color: #252A3B !important;
+  border-color: #2B3145 !important;
+}
+
+.dark-theme .action-btn {
+  color: #94A3B8 !important;
+}
+
+.dark-theme .action-btn.buy.active {
+  background-color: #16A34A !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .action-btn.sell.active {
+  background-color: #DC2626 !important;
+  color: #FFFFFF !important;
+}
+
+/* Threshold Section */
+.dark-theme .basket-thresholds-container {
+  background-color: transparent !important;
+}
+
+.dark-theme .threshold-label {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .threshold-header .info-icon {
+  filter: brightness(0) invert(1) opacity(0.7);
+}
+
+.dark-theme .threshold-checkbox {
+  background-color: #252A3B !important;
+  border-color: #3D4560 !important;
+}
+
+.dark-theme .threshold-checkbox:checked {
+  background-color: #E3530F !important;
+  border-color: #E3530F !important;
+}
+
+.dark-theme .advanced-link {
+  color: #FF7A38 !important;
+}
+
+.dark-theme .advanced-arrow-circle {
+  background-color: #252A3B !important;
+  border: 1px solid #3D4560 !important;
+}
+
+.dark-theme .advanced-arrow-icon {
+  filter: brightness(0) invert(1);
+}
+
+.dark-theme .basket-delete-btn img {
+  filter: brightness(0) invert(1) opacity(0.85);
+}
+
+.dark-theme .basket-delete-btn:hover img {
+  filter: brightness(0) invert(1) opacity(1);
+}
+
+.dark-theme .theta-field-label,
+.dark-theme .confirm-summary-label,
+.dark-theme .theta-confirm-label {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .theta-confirm-val,
+.dark-theme .confirm-summary-val {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .note-title {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .note-main,
+.dark-theme .note-sub {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .margin-value,
+.dark-theme .margin-val {
+  color: #FFFFFF !important;
+}
+
+.dark-theme .margin-label {
+  color: #CBD5E1 !important;
+}
+
+.dark-theme .margin-column .theta-info-icon circle,
+.dark-theme .theta-field-label .theta-info-icon circle {
+  stroke: #94A3B8 !important;
+}
+
+.dark-theme .margin-column .theta-info-icon path,
+.dark-theme .theta-field-label .theta-info-icon path {
+  stroke: #94A3B8 !important;
+}
+
+.dark-theme .empty-basket-title,
+.dark-theme .empty-basket-text {
+  color: #CBD5E1 !important;
+}
+
+.dark-theme .btn-add-items {
+  background-color: #E3530F !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .btn-add-items:hover {
+  background-color: #d04e06 !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .action-radio-label {
+  color: #FFFFFF !important;
+}
+
+/* Empty States */
+.dark-theme .empty-state h3,
+.dark-theme .empty-state p {
+  color: #FFFFFF !important;
+}
+
+/* SVG icons stroke / fill for close and back buttons in dark mode */
+.dark-theme .modal-close-btn svg path,
+.dark-theme .confirm-modal-close,
+.dark-theme .symbol-modal-close,
+.dark-theme .trades-modal-close,
+.dark-theme .back-btn svg path {
+  stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
